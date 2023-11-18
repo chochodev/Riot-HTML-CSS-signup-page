@@ -5,6 +5,14 @@
 }
 
 .body .bg_img {
+    display: none;
+}
+
+.body .bg_img_2 {
+    display: block;
+}
+
+.body .bg_img, .body .bg_img_2 {
     position: fixed;
     /* z-index: 1; */
     top: 0;
@@ -50,4 +58,169 @@
         fill: rgb(252, 252, 252);
         padding-right: 32px
     }
+
+    .body .bg_img {
+        display: block;
+    }
+
+    .body .bg_img_2 {
+        display: none;
+    }
+}
+
+
+/* FORM CONTENT */
+.main_content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+}
+
+.main_content .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: #ffffff;
+    width: 100%;
+    max-width: 566px;
+    padding: 32px;
+}
+
+.main_content .form .heading {
+    padding-top: 48px;
+    font-size: 25.63px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    text-align: inherit;
+    color: rgb(0, 0, 0);
+    width: max-content;
+}
+
+.main_content .form .input_div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(186, 186, 186, 0.1);
+    width: 100%;
+    max-width: 498px;
+    height: 60px;
+    border-radius: 3px;
+    transition: .1s outline .1s ease-in-out;
+}
+
+.main_content .form .input_div:hover,
+.main_content .form .input_div:focus-within {
+    background-color: rgba(186, 186, 186, 0.2);
+}
+
+.main_content .form .input_div span {
+    color: rgb(102, 102, 102);
+    width: 100%;
+    padding: 10px 0 0 10px ;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 100%;
+    font-size: 11.24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+.main_content .form .input_div label {
+    position: absolute;
+    left: 16px;
+    text-transform: uppercase;
+    color: rgb(102, 102, 102);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    font-size: 12.64px;
+    opacity: 1;
+    height: 17.33px;
+    pointer-events: none;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity;
+}
+
+.main_content .form .input_div .input {
+    background: transparent;
+    border: none;
+    padding: 5px 8px 8px 10px;
+    box-sizing: border-box;
+    display: block;
+    outline: none;
+    width: 100%;
+    color: rgb(31, 31, 31);
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.main_content .form .input_div:focus-within {
+    outline: 2px solid #000000;
+}
+
+.main_content .form .input_div:focus-within span {
+    opacity: 1;
+}
+
+.main_content .form .input_div:focus-within label {
+    opacity: 0 !important;
+}
+
+.main_content .form .cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.main_content .form .cta .btn {
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    outline: 1px solid #00000010;
+}
+
+.main_content .form .cta .btn.facebook_btn {
+    background: #1877F2;
+}
+.main_content .form .cta .btn.facebook_btn:hover {
+    background: rgb(9, 102, 222);
+}
+
+.main_content .form .cta .btn.google_btn {
+    background: #ffffff;
+}
+.main_content .form .cta .btn.google_btn:hover {
+    background: rgb(247, 247, 247);
+}
+
+.main_content .form .cta .btn.apple_btn {
+    background: #000000;
+}
+.main_content .form .cta .btn.apple_btn:hover {
+    background: rgb(20, 20, 20);
+}
+
+.main_content .form .cta .btn.xbox_btn {
+    background: #107C10;
+}
+.main_content .form .cta .btn.xbox_btn:hover {
+    background: rgb(7, 105, 7);
+}
+
+.main_content .form .cta .btn .icon {
+    font-size: 27px;
+    color: #ffffff;
 }
